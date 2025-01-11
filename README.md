@@ -34,3 +34,27 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Embedding the Form
+
+To embed this contact form in your website, add the following iframe code to your HTML:
+
+```html
+<iframe
+  src="https://your-deployed-url.com"
+  width="100%"
+  height="600px"
+  frameborder="0"
+  style="border: none; border-radius: 4px;"
+  title="Contact Form"
+></iframe>
+```
+
+### Customization Options
+
+You can customize the iframe appearance by adjusting the following attributes:
+- `width` and `height`: Modify the dimensions to fit your layout
+- `style`: Add custom CSS styles for borders, border-radius, etc.
+- `frameborder`: Set to "0" for no border or "1" for a border
+
+Make sure to replace `https://your-deployed-url.com` with the actual URL where your form is hosted.
