@@ -22,7 +22,7 @@ export default function ContactForm() {
               display: 'block'
             }}
             scrolling="no"
-            title="Submit Request Form"
+            title="Coperniq Lead Magnet"
             loading="lazy"
           />
         </div>
