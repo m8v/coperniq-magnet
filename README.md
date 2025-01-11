@@ -41,7 +41,7 @@ To embed this contact form in your website, add the following iframe code to you
 
 ```html
 <iframe
-  src="https://your-deployed-url.com"
+  src="https://portal.coperniq.io/YOUR_COMPANY/new"
   width="100%"
   height="600px"
   frameborder="0"
@@ -57,4 +57,7 @@ You can customize the iframe appearance by adjusting the following attributes:
 - `style`: Add custom CSS styles for borders, border-radius, etc.
 - `frameborder`: Set to "0" for no border or "1" for a border
 
-Make sure to replace `https://your-deployed-url.com` with the actual URL where your form is hosted.
+To get your specific embedding URL:
+1. Go to Workspace Settings
+2. Navigate to the Portal section
+3. Replace `YOUR_COMPANY` in the iframe code with your company identifier from the portal URL
