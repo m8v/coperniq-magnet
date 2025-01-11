@@ -46,7 +46,7 @@ To embed this contact form in your website, add the following iframe code to you
   height="600px"
   frameborder="0"
   style="border: none; border-radius: 4px;"
-  title="Contact Form"
+  title="Coperniq Lead Magnet"
 ></iframe>
 ```
 
