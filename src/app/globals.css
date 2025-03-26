@@ -5,17 +5,71 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --primary: #f59e0b;
+  --primary-foreground: #fef3c7;
+  --secondary: #f8fafc;
+  --secondary-foreground: #334155;
+  --destructive: #ef4444;
+  --destructive-foreground: #fef2f2;
+  --muted: #f8fafc;
+  --muted-foreground: #94a3b8;
+  --accent: #f8fafc;
+  --accent-foreground: #334155;
+  --ring: #e5e7eb;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --card: #111111;
+    --card-foreground: #ededed;
+    --primary: #f59e0b;
+    --primary-foreground: #fef3c7;
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+    --destructive: #ef4444;
+    --destructive-foreground: #fef2f2;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --accent: #1e293b;
+    --accent-foreground: #f8fafc;
+    --ring: #292929;
+    --border: #292929;
+    --input: #292929;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+  h2 {
+    @apply text-3xl font-extrabold;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  p {
+    @apply leading-7;
+  }
 }
