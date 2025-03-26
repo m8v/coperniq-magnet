@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Check, Info, Shield, Sun, Zap, AlertTriangle } from "lucide-react"
+import { Check, Info, Shield, Sun, Zap, AlertTriangle, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export default function SolarCareMembershipPlans() {
   // Use null as initial state to avoid hydration mismatch
@@ -98,7 +98,7 @@ export default function SolarCareMembershipPlans() {
       color: "bg-gradient-to-br from-[#C0C0C0] to-[#505050] dark:from-[#A0A0A0] dark:to-[#303030]",
       borderColor: "border-[#505050] dark:border-[#303030]",
       iconColor: "text-[#303030] dark:text-[#E5E4E2]",
-      buttonVariant: "default"
+      buttonVariant: "outline"
     }
   ]
 
@@ -156,9 +156,13 @@ export default function SolarCareMembershipPlans() {
                 </div>
               </div>
               <div className="flex justify-center mt-8">
-                <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-white" asChild>
-                  <a href="/contact#contactForm">Request Services</a>
-                </Button>
+                <Link href="/contact#contactForm" className="inline-flex items-center justify-center text-base px-8 py-5 font-medium rounded-md bg-primary text-white hover:bg-primary/90 transition-all shadow-md hover:shadow-xl group relative overflow-hidden">
+                  <span className="relative z-10 flex items-center">
+                    Request Services
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                  </span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                </Link>
               </div>
             </div>
           </CardContent>
@@ -245,9 +249,13 @@ export default function SolarCareMembershipPlans() {
               </div>
             </CardContent>
             <CardFooter className="mt-auto pt-6">
-              <Button className="w-full" variant={plan.buttonVariant as "default" | "outline"} asChild>
-                <a href="/contact#contactForm">Select Plan</a>
-              </Button>
+              <Link href="/contact#contactForm" className={`inline-flex items-center justify-center w-full text-base px-6 py-3 font-medium rounded-md transition-all shadow-md hover:shadow-xl group relative overflow-hidden ${plan.buttonVariant === "default" ? "bg-primary text-white hover:bg-primary/90" : "bg-background text-foreground border border-input hover:bg-accent hover:text-accent-foreground"}`}>
+                <span className="relative z-10 flex items-center justify-center w-full">
+                  Select Plan
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                </span>
+                <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              </Link>
             </CardFooter>
           </Card>
         ))}
@@ -265,9 +273,13 @@ export default function SolarCareMembershipPlans() {
                 If your original installer is no longer in business, our Protect plans work for any solar system regardless of who installed it. We support all major OEM equipment.
               </p>
               <div className="flex justify-center md:justify-start">
-                <Button variant="default" className="bg-amber-500 hover:bg-amber-600 text-white" asChild>
-                  <a href="/contact#contactForm">Protect Your System</a>
-                </Button>
+                <Link href="/contact#contactForm" className="inline-flex items-center justify-center text-base px-8 py-5 font-medium rounded-md bg-primary text-white hover:bg-primary/90 transition-all shadow-md hover:shadow-xl group relative overflow-hidden">
+                  <span className="relative z-10 flex items-center">
+                    Protect Your System
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                  </span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                </Link>
               </div>
             </div>
           </div>

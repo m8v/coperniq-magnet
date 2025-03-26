@@ -10,7 +10,8 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const links = [
-    { href: '/', label: 'Home' },
+    { href: '/residential', label: 'Residential' },
+    { href: '/commercial', label: 'Commercial' },
     { href: '/services', label: 'Services & Protect' },
     { href: '/contact', label: 'Contact' }
   ];
@@ -29,9 +30,7 @@ export default function Navigation() {
           {/* Desktop navigation */}
           <div className="hidden sm:flex sm:space-x-8">
             {links.map(link => {
-              const isActive = 
-                link.href === '/' ? pathname === '/' : 
-                pathname.startsWith(link.href);
+              const isActive = pathname === link.href;
                 
               return (
                 <Link 
@@ -74,9 +73,7 @@ export default function Navigation() {
         <div className="sm:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-b border-border">
             {links.map(link => {
-              const isActive = 
-                link.href === '/' ? pathname === '/' : 
-                pathname.startsWith(link.href);
+              const isActive = pathname === link.href;
                 
               return (
                 <Link 
