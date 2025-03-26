@@ -197,7 +197,7 @@ export default function SolarCareMembershipPlans() {
         {plans.map((plan) => (
           <Card 
             key={plan.id}
-            className={`relative h-auto min-h-full transition-all duration-300 overflow-visible flex flex-col ${
+            className={`relative h-full flex flex-col transition-all duration-300 ${
               hoveredPlan === plan.id ? "scale-[1.02] shadow-lg" : ""
             } ${plan.color} ${plan.borderColor} border-2`}
             onMouseEnter={() => setHoveredPlan(plan.id)}
